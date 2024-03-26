@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend del Sistema de Pagos con Stripe 💻
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=stripe&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-In the project directory, you can run:
+Frontend construido con React, diseñado para integrarse de manera fluida con un backend de pagos Stripe, facilitando la gestión de transacciones, visualización de productos y el proceso de checkout en una aplicación de e-commerce.
 
-### `npm start`
+![Logo del Proyecto](./logo.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Este proyecto frontend implementa una interfaz de usuario moderna y funcional para interactuar con el sistema de pagos Stripe. Utilizando React como framework, ofrece una experiencia de usuario interactiva y eficiente para realizar operaciones de pago, visualizar productos y gestionar el carrito de compras.
 
-### `npm test`
+## Índice
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Breve Descripción](#breve-descripción)
+- [🌟 Características Principales](#-características-principales)
+- [💻 Tecnologías Utilizadas](#-tecnologías-utilizadas)
+- [📸 Capturas de Pantalla](#-capturas-de-pantalla)
+- [📚 Retos y Soluciones](#-retos-y-soluciones)
+  - [Páginas Web Consultadas](#páginas-web-consultadas)
+- [⚙️ Configuración del Proyecto](#️-configuración-del-proyecto)
+- [📝 Licencia](#-licencia)
+- [📞 Contacto](#-contacto)
 
-### `npm run build`
+## Breve Descripción
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌟 Características Principales
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Interfaz de Usuario Intuitiva**: Navegación fácil y accesible para explorar productos y gestionar el carrito de compras.
+- **Integración con Stripe para Pagos**: Procesamiento seguro de pagos con soporte para múltiples métodos de pago.
+- **Visualización de Productos**: Muestra detallada de productos con imágenes, descripciones y precios.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💻 Tecnologías Utilizadas
 
-### `npm run eject`
+- React para el desarrollo de la interfaz de usuario.
+- Stripe JS y React Stripe.js para la integración de pagos.
+- Axios para las solicitudes HTTP al backend.
+- Environment Variables para manejar la configuración y claves API.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📸 Capturas de Pantalla
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Incluye aquí algunas capturas de pantalla de la aplicación, como la página de inicio, la visualización de productos y el formulario de pago.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📚 Retos y Soluciones
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Páginas Web Consultadas
 
-## Learn More
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Stripe JS Reference](https://stripe.com/docs/js)
+- [React Stripe.js Documentation](https://stripe.com/docs/stripe-js/react)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Configuración del Proyecto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para poner en marcha este proyecto frontend:
 
-### Code Splitting
+1. Clona el repositorio a tu máquina local.
+2. Instala las dependencias utilizando `npm install`.
+3. Configura tus variables de entorno en un archivo `.env` para incluir tus claves de API de Stripe.
+4. Ejecuta `npm start` para iniciar el servidor de desarrollo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📝 Licencia
 
-### Analyzing the Bundle Size
+Este proyecto está bajo la [Licencia MIT](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📞 Contacto
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para soporte o consultas, por favor envía un correo a [business@noeosorio.com](mailto:business@noeosorio.com).
