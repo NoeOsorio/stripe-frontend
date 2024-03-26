@@ -10,16 +10,14 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./PaymentForm.css"; // Asegúrate de crear este archivo CSS
 
-const stripePromise = loadStripe(
-  "pk_test_51OyIUYFExg80XblCREhCWjooBCv5c7LMW9ipNobJzL5y4grHAiasMJptsiVDMswupa3xsAREFCXY9NeEdzrwS3Wt00h0ITe6VK"
-);
-
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 const CheckoutForm = () => {
   const stripe = useStripe(); // Se utiliza para interactuar con la API de Stripe.
   const elements = useElements(); // Se usa para obtener una instancia del elemento CardElement.
   const navigate = useNavigate(); // Hook de React Router para redirigir programáticamente.
   const [name, setName] = useState(""); // Estado para el nombre del cliente.
   const [email, setEmail] = useState(""); // Estado para el correo electrónico del cliente.
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -37,25 +35,28 @@ const CheckoutForm = () => {
     });
 
     if (error) {
-      console.log("[error]", error);
+      console.error("[error]", error);
     } else {
       try {
         const { id: paymentMethodId } = paymentMethod;
         // Envía una solicitud al backend para crear un PaymentIntent con el ID del método de pago y la información adicional.
         const {
           data: { clientSecret },
-        } = await axios.post("http://localhost:4242/create-payment-intent", {
-          paymentMethodId,
-          amount: 2000, // La cantidad fija a pagar.
-          name,
-          email,
-        });
+        } = await axios.post(
+          `${process.env.REACT_APP_API_URL}/create-payment-intent`,
+          {
+            paymentMethodId,
+            amount: 2000, // La cantidad fija a pagar.
+            name,
+            email,
+          }
+        );
 
         // Usa el clientSecret para confirmar el pago desde el frontend.
         const result = await stripe.confirmCardPayment(clientSecret);
 
         if (result.error) {
-          console.log(result.error.message);
+          console.error(result.error.message);
         } else {
           if (result.paymentIntent.status === "succeeded") {
             console.log("Pago realizado con éxito!");
@@ -87,7 +88,6 @@ const CheckoutForm = () => {
           required
         />
         <CardElement />
-
         <button type="submit" className="submit-button" disabled={!stripe}>
           Pagar $20.00 MXN
         </button>
