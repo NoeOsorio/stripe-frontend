@@ -1,0 +1,17 @@
+.success-page {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.success-icon {
+  font-size: 48px; /* Ajusta el tamaño de la palomita según prefieras */
+  color: white; /* Color de la palomita */
+  background-color: #28a745; /* Fondo verde */
+  border-radius: 50%; /* Hace el fondo completamente redondo */
+  width: 75px; /* Tamaño del círculo */
+  height: 75px; /* Tamaño del círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px; /* Centra el ícono y añade espacio debajo */
+}
