@@ -69,3 +69,5 @@ Este proyecto está bajo la [Licencia MIT](LICENSE).
 ## 📞 Contacto
 
 Para soporte o consultas, por favor envía un correo a [business@noeosorio.com](mailto:business@noeosorio.com).
+
+[Backend](https://github.com/NoeOsorio/stripe-backend)
